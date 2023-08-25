@@ -46,4 +46,10 @@ jobs:
     - name: Extraindo 
       run: tar -xf google-cloud-cli-444.0.0-linux-x86_64.tar.gz
 
+    - name: using bq
+      run: cd ./google-cloud-sdk/bin
+
+    - name: bq
+      run: ./bq --help
+
       
