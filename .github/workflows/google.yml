@@ -50,6 +50,6 @@ jobs:
       run: cd ./google-cloud-sdk/bin
 
     - name: bq
-      run: ./bq --help
+      run: ls -ltr
 
       
