@@ -47,6 +47,10 @@ jobs:
       run: tar -xf google-cloud-cli-444.0.0-linux-x86_64.tar.gz
       
     - name: bq
-      run: for i in $(ls ./sql); do; ./google-cloud-sdk/bin/bq $i; done;
-
+      run: | 
+        for i in $(ls ./sql)
+        do
+        echo $i
+        done
+      
       
