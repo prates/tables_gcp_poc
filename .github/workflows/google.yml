@@ -50,7 +50,7 @@ jobs:
       run: | 
         for i in $(ls ./sql)
         do
-          ./google-cloud-sdk/bin/bq query $(cat $i)
+          ./google-cloud-sdk/bin/bq query $(cat ./sql/$i)
         done
       
       
