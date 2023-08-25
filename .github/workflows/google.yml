@@ -50,7 +50,7 @@ jobs:
       run: | 
         for i in $(ls ./sql)
         do
-          ./google-cloud-sdk/bin/bq query $(cat ./sql/$i)
+          ./google-cloud-sdk/bin/bq query --project_id="pocanalytics-397014"  $(cat ./sql/$i)
         done
       
       
