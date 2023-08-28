@@ -40,17 +40,12 @@ jobs:
       with:
         credentials_json: '${{ secrets.GCP_CREDENTIALS }}'
 
-    - name: Download gcloud
-      run: curl -O https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-444.0.0-linux-x86_64.tar.gz
+    - name: Install libs
+      run: pip install --upgrade google-cloud-bigquery 
 
-    - name: Extraindo 
-      run: tar -xf google-cloud-cli-444.0.0-linux-x86_64.tar.gz
+    - name: Executando query 
+      run: python run_query.py sql
       
-    - name: bq
-      run: | 
-        for i in $(ls ./sql)
-        do
-          ./google-cloud-sdk/bin/bq query --project_id="pocanalytics-397014"  $(cat ./sql/$i)
-        done
+    
       
       
