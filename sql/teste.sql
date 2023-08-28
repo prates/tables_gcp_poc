@@ -1,4 +1,4 @@
-CREATE TABLE teste_poc.tabel2 (
+CREATE TABLE teste_poc.tabel3 (
   `ADDRESS_ID` STRING,
   `INDIVIDUAL_ID` STRING,
   `FIRST_NAME` STRING,
