@@ -6,7 +6,7 @@ from google.cloud import bigquery
 # Construct a BigQuery client object.
 
 project = os.environ.get("PROJECT_ID")
-folder = sys.argv[2]
+folder = sys.argv[1]
 
 client = bigquery.Client(project=project)
 
